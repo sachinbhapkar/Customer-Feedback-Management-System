@@ -16,3 +16,16 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+management:
+  server:
+    port: 8888
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
